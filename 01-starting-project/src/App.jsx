@@ -9,6 +9,8 @@ import CompImg  from './assets/components.png';
 import UiImg  from './assets/jsx-ui.png';
 import StateImg  from './assets/state-mgmt.png';
 
+import { CORE_CONCEPTS } from './data';
+
 
 
 function App() {
@@ -26,10 +28,10 @@ function App() {
         <section id='core-concepts' >
         <h2>Core Concepts</h2>
       <ul>
-        <CoreConcept image={ConfigImg} title="Fundamental" desc="Fundamental React Concepts" />
-        <CoreConcept image={CompImg} title="Basic" desc="Fundamental desc1"  />
-        <CoreConcept image={UiImg} title="Concepts" desc="Fundamental desc2" />
-        <CoreConcept image={StateImg} title="React" desc="Fundamental desc3" />
+        <CoreConcept image={CORE_CONCEPTS[0].image} title={CORE_CONCEPTS[0].title} desc={CORE_CONCEPTS[0].description} />
+        <CoreConcept image={CORE_CONCEPTS[1].image} title={CORE_CONCEPTS[1].title} desc={CORE_CONCEPTS[1].description}  />
+        <CoreConcept image={CORE_CONCEPTS[2].image} title={CORE_CONCEPTS[2].title} desc={CORE_CONCEPTS[2].description} />
+        <CoreConcept image={CORE_CONCEPTS[3].image} title={CORE_CONCEPTS[3].title} desc={CORE_CONCEPTS[3].description} />
       </ul>
         </section>
 
