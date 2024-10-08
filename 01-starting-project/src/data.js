@@ -17,6 +17,18 @@ export const CORE_CONCEPTS = [
       'Return (potentially dynamic) HTML(ish) code to define the actual markup that will be rendered.',
   },
   {
+    image: jsxImg,
+    title: 'JSX',
+    description:
+      'Return (potentially dynamic) HTML(ish) code to define the actual markup that will be rendered.',
+  },
+  {
+    image: jsxImg,
+    title: 'JSX',
+    description:
+      'Return (potentially dynamic) HTML(ish) code to define the actual markup that will be rendered.',
+  },
+  {
     image: propsImg,
     title: 'Props',
     description:
