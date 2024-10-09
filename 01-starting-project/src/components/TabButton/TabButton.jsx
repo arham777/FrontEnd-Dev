@@ -1,11 +1,16 @@
 import React from 'react'
 
 export default function TabButton (props){
-  return (
+  
+    function handleClick () {
+        console.log('Hello World');
+    }
+
+    return (
    <>
 
     <li>
-        <button>
+        <button onClick={handleClick} >
             {props.children}
             {props.title}
         </button>
@@ -13,4 +18,4 @@ export default function TabButton (props){
 
    </>
   );
-}
+};
