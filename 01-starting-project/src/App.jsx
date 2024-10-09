@@ -10,6 +10,7 @@ import UiImg  from './assets/jsx-ui.png';
 import StateImg  from './assets/state-mgmt.png';
 
 import { CORE_CONCEPTS } from './data';
+import TabButton from './components/TabButton/TabButton';
 
 
 
@@ -22,7 +23,7 @@ function App() {
         <h2>Time to get started!</h2>
       </main>
       {/* <img src={imgMain} alt="Stylized atom" /> */}
-
+      {/* < TabButton/> */}
       <main>
         
         <section id='core-concepts' >
@@ -42,6 +43,20 @@ function App() {
         }
 
       </ul>
+        </section>
+
+
+        <section id='examples' >
+            <h2>Examples</h2>
+        
+
+        <menu>
+          <TabButton  >Through Children</TabButton>
+          <TabButton  >Through Children</TabButton>
+          <TabButton title='Through props' ></TabButton>
+          <TabButton title='Through props' ></TabButton>
+          
+        </menu>
         </section>
 
       </main>
