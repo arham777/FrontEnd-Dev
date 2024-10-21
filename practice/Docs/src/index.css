@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: Roboto;
+
+}
+
+::selection{
+  color: rgb(232, 145, 47);
+
+}

@@ -16,6 +16,10 @@ import TabButton from './components/TabButton/TabButton';
 
 function App() {
 
+  const xyz = ()=>{
+    console.log("Hello World");
+  }
+
   return (
     <div>
       <Header/>
@@ -55,6 +59,7 @@ function App() {
           <TabButton  >Through Children</TabButton>
           <TabButton title='Through props' ></TabButton>
           <TabButton title='Through props' ></TabButton>
+          <TabButton select={xyz} >Components</TabButton>
           
         </menu>
         </section>
