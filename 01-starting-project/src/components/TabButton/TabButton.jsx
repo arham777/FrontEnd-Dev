@@ -10,10 +10,16 @@ export default function TabButton (props){
    <>
 
     <li>
-        <button onClick={handleClick} >
+        {/* <button onClick={handleClick} >
+            {props.children}
+            {props.title}
+        </button> */}
+
+        <button onClick={props.select} >
             {props.children}
             {props.title}
         </button>
+
     </li>
 
    </>

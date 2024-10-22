@@ -16,8 +16,15 @@ import TabButton from './components/TabButton/TabButton';
 
 function App() {
 
-  const xyz = ()=>{
-    console.log("Hello World");
+  // const xyz = ()=>{
+  //   console.log("Hello World-parent");
+  // }
+
+  let DynamicContent="please press any button"
+
+  const xyz = (abc)=>{
+    DynamicContent=abc;
+    console.log(abc);
   }
 
   return (
@@ -55,13 +62,21 @@ function App() {
         
 
         <menu>
-          <TabButton  >Through Children</TabButton>
+          {/* <TabButton  >Through Children</TabButton>
           <TabButton  >Through Children</TabButton>
           <TabButton title='Through props' ></TabButton>
-          <TabButton title='Through props' ></TabButton>
-          <TabButton select={xyz} >Components</TabButton>
-          
+          <TabButton title='Through props' ></TabButton> */}
+          <TabButton select={()=>{xyz('Through children')}} >Through Children</TabButton>
+          <TabButton select={()=>{xyz('Components')}} >Components</TabButton>
+          <TabButton select={()=>{xyz('Through props')}} title='Through props'></TabButton>
+
+          {/* <TabButton select={xyz} >Through Children</TabButton>
+          <TabButton select={xyz} title='Through props' ></TabButton>
+          <TabButton select={xyz} title='Through props' ></TabButton>
+          <TabButton select={xyz} >Components</TabButton> */}
+         
         </menu>
+        {DynamicContent}
         </section>
 
       </main>
