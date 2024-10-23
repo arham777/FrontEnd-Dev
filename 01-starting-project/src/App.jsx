@@ -11,19 +11,22 @@ import StateImg  from './assets/state-mgmt.png';
 
 import { CORE_CONCEPTS } from './data';
 import TabButton from './components/TabButton/TabButton';
+import { useState } from "react";
 
 
 
 function App() {
+    const [selectedTopic, setSelectedTopic ] = useState('please press any button');
 
   // const xyz = ()=>{
   //   console.log("Hello World-parent");
   // }
 
-  let DynamicContent="please press any button"
+  let DynamicContent= selectedTopic;
 
   const xyz = (abc)=>{
-    DynamicContent=abc;
+    setSelectedTopic(abc);
+    DynamicContent=selectedTopic;
     console.log(abc);
   }
 
