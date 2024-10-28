@@ -6,6 +6,8 @@ export default function TabButton (props){
         console.log('Hello World');
     }
 
+    console.log(props.isSelected)
+
     return (
    <>
 
@@ -15,7 +17,7 @@ export default function TabButton (props){
             {props.title}
         </button> */}
 
-        <button onClick={props.select} >
+        <button className={props.isSelected ? 'active' : null } onClick={props.select} >
             {props.children}
             {props.title}
         </button>

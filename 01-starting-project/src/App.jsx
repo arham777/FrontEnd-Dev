@@ -17,7 +17,11 @@ import { useState } from "react";
 
 function App() {
     // const [selectedTopic, setSelectedTopic ] = useState('please press any button');
-    const [selectedTopic, setSelectedTopic ] = useState('components');
+    // const [selectedTopic, setSelectedTopic ] = useState('components');
+    // const [selectedTopic, setSelectedTopic ] = useState();
+    // const [selectedTopic, setSelectedTopic ] = useState('please press any button');  Wrong method
+    const [selectedTopic, setSelectedTopic ] = useState();
+
 
   // const xyz = ()=>{
   //   console.log("Hello World-parent");
@@ -29,7 +33,7 @@ function App() {
     setSelectedTopic(abc);
     DynamicContent=selectedTopic;
     console.log(abc);
-  }
+  }   
 
   return (
     <div>
@@ -80,20 +84,77 @@ function App() {
           <TabButton select={()=>{xyz('Components')}} >Components</TabButton>
           <TabButton select={()=>{xyz('Through props')}} title='Through props'></TabButton>  */}
 
-          <TabButton select={()=>{xyz('jsx')}} >JSX</TabButton>
-          <TabButton select={()=>{xyz('components')}} >Components</TabButton>
-          <TabButton select={()=>{xyz('props')}} >Props</TabButton>
-          <TabButton select={()=>{xyz('state')}} title='State'></TabButton>
+          <TabButton isSelected={selectedTopic==='jsx'} select={()=>{xyz('jsx')}} >JSX</TabButton>
+          <TabButton isSelected={selectedTopic==='components'}  select={()=>{xyz('components')}} >Components</TabButton>
+          <TabButton isSelected={selectedTopic==='props'}  select={()=>{xyz('props')}} >Props</TabButton>
+          <TabButton isSelected={selectedTopic==='state'}  select={()=>{xyz('state')}} title='State'></TabButton>
          
         </menu>
         {/* {DynamicContent} */}
-        <div id='tab-content' >
+
+            {/* { !selectedTopic ? <p>Please select a button</p> : null  }
+
+            { selectedTopic ?  
+                <div id='tab-content' >
+                <h3>{EXAMPLES[selectedTopic].title}</h3>
+                <p>{EXAMPLES[selectedTopic].description}</p>
+                <pre>
+                  <code>{EXAMPLES[selectedTopic].code}</code>
+                </pre>
+            </div> 
+              : null  } */}
+
+                {/* { selectedTopic ? <p>Please select a button</p> :
+                  <div id='tab-content' >
+                  <h3>{EXAMPLES[selectedTopic].title}</h3>
+                  <p>{EXAMPLES[selectedTopic].description}</p>             Wrong method
+                  <pre>
+                    <code>{EXAMPLES[selectedTopic].code}</code>
+                  </pre>
+              </div>  } */}
+
+
+                {/* { !selectedTopic && <p>Please select a button</p> }
+                 {  selectedTopic && <div id='tab-content' >
+                  <h3>{EXAMPLES[selectedTopic].title}</h3>             also can use this method
+                  <p>{EXAMPLES[selectedTopic].description}</p>
+                  <pre>
+                    <code>{EXAMPLES[selectedTopic].code}</code>
+                  </pre>
+              </div>  } */}
+
+
+
+
+              { !selectedTopic ? <p>Please select a button</p> :
+                  <div id='tab-content' >
+                  <h3>{EXAMPLES[selectedTopic].title}</h3>   
+                  <p>{EXAMPLES[selectedTopic].description}</p>
+                  <pre>
+                    <code>{EXAMPLES[selectedTopic].code}</code>
+                  </pre>
+              </div>  }
+
+
+{/* 
+              { !selectedTopic ? <p>Please select a button</p> :
+                  <div id='tab-content' >
+                  <h3>{EXAMPLES[DynamicContent].title}</h3>       ( it will run but use state)
+                  <p>{EXAMPLES[DynamicContent].description}</p>
+                  <pre>
+                    <code>{EXAMPLES[DynamicContent].code}</code>
+                  </pre>
+              </div>  } */}
+              
+            
+        {/* <div id='tab-content' >
             <h3>{EXAMPLES[selectedTopic].title}</h3>
             <p>{EXAMPLES[selectedTopic].description}</p>
             <pre>
               <code>{EXAMPLES[selectedTopic].code}</code>
             </pre>
-        </div>
+        </div> */}
+        
         </section>
 
       </main>
