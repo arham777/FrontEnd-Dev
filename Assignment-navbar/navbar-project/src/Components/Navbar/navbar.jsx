@@ -1,8 +1,20 @@
+import NavTags from "../NavTags/NavTags";
 import "../Styles/NavbarStyle.css";
+import { useState } from 'react';
+
 
 
 function Navbar() {
+  const[ selectedTopic, setSelectedTopic ] = useState();
 
+ 
+
+  const xyz=(abc)=>{
+    setSelectedTopic(abc);
+    
+    console.log(abc)
+  }
+  
   return (
     <>
     <nav>
@@ -12,8 +24,22 @@ function Navbar() {
       </a>
 
       <div>
+        <section>
+          <ul className="navbar-tags">
+            <NavTags key='home' isSelected={selectedTopic==='home'} select={()=> {xyz('home')}}>Home</NavTags>
+            <NavTags key='shop' isSelected={selectedTopic==='shop'} select={()=> {xyz('shop')}} >Shop</NavTags>
+            <NavTags key='about' isSelected={selectedTopic==='about'} select={()=> {xyz('about')}} >About</NavTags>
+            <NavTags key='contact' isSelected={selectedTopic==='contact'} select={()=> {xyz('contact')}} >Contact</NavTags>
+          </ul>
+        </section>
+
+      
+    
+{/* 
         <ul className="navbar-tags">
+          
           <li>
+  
           <a href="" className="navbar-tags-anchor, active">Home
             </a>
           </li>
@@ -23,7 +49,7 @@ function Navbar() {
           </a></li>
           <li><a href="" className="navbar-tags-anchor">Contact
           </a></li>
-        </ul>
+        </ul> */}
       </div>
 
     </nav>
