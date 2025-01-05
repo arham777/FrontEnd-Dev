@@ -8,6 +8,7 @@ const Header = () => {
 
     const xyz= (abc) =>{
       setSelectedTopic(abc);
+      console.log(abc);
     }
 
   return (
@@ -16,35 +17,27 @@ const Header = () => {
           <img src={logo} alt="" />
         </div>
 
-        {/* <ul className='flex justify-end space-x-4 font-bold '>
-          <NavTag key='portfolio' isSelected={selectedTopic==='portfolio'} select{()={xyz('portfolio')} } >Portfolio</NavTag>
-          <NavTag key='shop' isSelected={selectedTopic==='shop'} select{()={xyz('shop')} } >Shop</NavTag>
-          <NavTag key='contact' isSelected={selectedTopic==='contact'} select {()={xyz('contact')} }>Contact</NavTag>
-        </ul> */}
+        <div className="flex justify-end space-x-4 font-bold ">
+          <NavTag
+            isSelected={selectedTopic === 'portfolio'}
+            select={ ()=> { xyz('portfolio') } }
+          >
+            Portfolio
+          </NavTag>
+          <NavTag
+            isSelected={selectedTopic === 'shop'}
+            select={ ()=>{ xyz('shop')} }
+          >
+            Shop
+          </NavTag>
 
-<ul className="flex justify-end space-x-4 font-bold">
-  <NavTag
-    key="portfolio"
-    isSelected={selectedTopic === 'portfolio'}
-    select={() => setSelectedTopic('portfolio')}
-  >
-    Portfolio
-  </NavTag>
-  <NavTag
-    key="shop"
-    isSelected={selectedTopic === 'shop'}
-    select={() => setSelectedTopic('shop')}
-  >
-    Shop
-  </NavTag>
-  <NavTag
-    key="contact"
-    isSelected={selectedTopic === 'contact'}
-    select={() => setSelectedTopic('contact')}
-  >
-    Contact
-  </NavTag>
-</ul>
+          <NavTag
+            isSelected={selectedTopic === 'contact'}
+            select={ ()=> { xyz('contact')} }
+          >
+            Contact
+          </NavTag>
+        </div>
 
 
     </div>

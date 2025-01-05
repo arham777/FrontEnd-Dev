@@ -1,32 +1,24 @@
 // import React from 'react';
-import './App.css';
 import Header from './Components/Header/Header';
 import { MyTitle } from './Components/MyTitle/MyTitle';
 import mainImg from './assets/main.jpg'
-import './assets/mainBg.jpg'
 import About from './Components/About/About';
 import Portfolio from './Components/Portfolio/Portfolio';
 import insta from './assets/insta.png';
 import fb from './assets/fb.png';
 import x from './assets/x.png';
+import wed from './assets/wed.jpg';
+import prod from './assets/prod.jpeg';
+import nature from './assets/nature.jpeg';
+import port from './assets/port.jpeg';
+
 const App = () => {
   return (
-    <div >
-      <Header/>
-      {/* <header className=' flex items-center justify-between space-x-4 p-4 font-bold' >
-        <div className='w-8 '>
-          <img src={logo} alt="" />
-        </div>
-        <ul className='flex justify-end space-x-4 font-bold '>
-          {/* <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">Contact</a></li> */}
-          {/* <NavTag>Portfolio</NavTag>
-          <NavTag>Shop</NavTag>
-          <NavTag>Contact</NavTag>
-        </ul>
-      </header> */}
-      {/* <h1 className='text-3xl font-bold grid h-screen place-content-center'>PORTFOLIO</h1> */}
+    <div>
+      <section>
+        <Header />
+      </section>
+    
       <section className='h-screen bg-right bg-cover bg-[url("./assets/mainBg.jpg")]'>
         <MyTitle title='M. Arham Athar' para='Using my creativity to describe emotions with my lens' />
       </section>
@@ -36,12 +28,12 @@ const App = () => {
       </section>
 
       <section className='pb-48 '>
-        <h1 className='m-4 text-3xl font-bold' >Portfolio</h1>
+        <h1 className='mx-8 my-4 text-3xl font-bold' >Portfolio</h1>
         <div className='m-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
-        <Portfolio img={mainImg} category='Product' />
-        <Portfolio img={mainImg} category='Wedding'  />
-        <Portfolio img={mainImg} category='Nature'  />
-        <Portfolio img={mainImg} category='Portraits'  />
+        <Portfolio img={prod} category='Product' />
+        <Portfolio img={wed} category='Wedding'  />
+        <Portfolio img={nature} category='Nature'  />
+        <Portfolio img={port} category='Portraits'  />
         </div>
         
       </section>
